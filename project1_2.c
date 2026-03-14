@@ -2,15 +2,15 @@
 #include <stdio.h>
 
     int main() {
-        double input;
+        float input;
         int bits[16] = { 0 }; 
 
         printf("입력값: ");
-        scanf("%lf", &input);
+        scanf("%f", &input);
 
-        double temp = (input < 0) ? -input : input;
+        float temp = (input < 0) ? -input : input;
         int i_part = (int)temp;
-        double f_part = temp - i_part;
+        float f_part = temp - i_part;
 
         for (int i = 7; i >= 0; i--) {
             bits[i] = i_part % 2;
